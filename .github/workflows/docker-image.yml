@@ -18,5 +18,5 @@ jobs:
       run: sudo docker build . -t front
     - name: remove existing container
       run: sudo docker ps --quiet --filter="name=frontend" | xargs --no-run-if-empty docker rm -f
-    - name: run th Docker container
+    - name: run the Docker container
       run: sudo docker run -dt -p 80:80 --restart always --name frontend frontend
